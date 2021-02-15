@@ -1,0 +1,7 @@
+# donationtracker
+
+## Installation
+
+### Windows
+
+### Linux
