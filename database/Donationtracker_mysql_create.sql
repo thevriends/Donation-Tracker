@@ -5,7 +5,7 @@ CREATE TABLE `Users` (
 	`Lastlogin` TIMESTAMP NOT NULL,
 	`Usertype` varchar(12) NOT NULL,
 	`Active` BOOLEAN,
-	`Church` INT,
+	`Church` INT NOT NULL,
 	PRIMARY KEY (`UserID`)
 );
 
@@ -13,7 +13,7 @@ CREATE TABLE `Church` (
 	`ChurchID` INT NOT NULL AUTO_INCREMENT,
 	`Name` varchar(255) NOT NULL UNIQUE,
 	`Address` varchar(255) NOT NULL,
-	`Creator` varchar(80) NOT NULL,
+	`Creator` varchar(80),
 	`Active` BOOLEAN,
 	PRIMARY KEY (`ChurchID`)
 );
