@@ -60,8 +60,6 @@ CREATE TABLE `Donation` (
 
 ALTER TABLE `Users` ADD CONSTRAINT `Users_fk0` FOREIGN KEY (`Church`) REFERENCES `Church`(`ChurchID`);
 
-ALTER TABLE `Church` ADD CONSTRAINT `Church_fk0` FOREIGN KEY (`Creator`) REFERENCES `Users`(`Username`);
-
 ALTER TABLE `Donor` ADD CONSTRAINT `Donor_fk0` FOREIGN KEY (`Church`) REFERENCES `Church`(`ChurchID`);
 
 ALTER TABLE `Charity` ADD CONSTRAINT `Charity_fk0` FOREIGN KEY (`Church`) REFERENCES `Church`(`ChurchID`);
