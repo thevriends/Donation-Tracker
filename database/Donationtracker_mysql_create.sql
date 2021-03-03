@@ -1,6 +1,6 @@
 CREATE TABLE `Users` (
 	`UserID` INT NOT NULL AUTO_INCREMENT,
-	`Username` varchar(80) NOT NULL AUTO_INCREMENT UNIQUE,
+	`Username` varchar(80) NOT NULL UNIQUE,
 	`Password` varchar(255) NOT NULL,
 	`Lastlogin` TIMESTAMP NOT NULL,
 	`Usertype` varchar(12) NOT NULL,
