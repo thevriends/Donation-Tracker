@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDonorsTable extends Migration
+class CreateCharitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateDonorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('donors', function (Blueprint $table) {
+        Schema::create('charities', function (Blueprint $table) {
             $table->id();
+            $table->string("charitynumber");
             $table->string("name");
             $table->string("address");
             $table->string("phone");
             $table->string('email');
-            $table->bigInteger('church_id');            
+            $table->bigInteger('church_id');
+            $table->boolean('active')->default(true);  
             $table->timestamps();
         });
     }
@@ -31,6 +33,6 @@ class CreateDonorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('donors');
+        Schema::dropIfExists('charities');
     }
 }

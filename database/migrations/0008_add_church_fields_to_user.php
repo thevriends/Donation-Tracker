@@ -18,6 +18,7 @@ class AddChurchFieldsToUser extends Migration
             $table->string('user_type')->default(0);
             $table->boolean('active')->default(true);
             $table->unsignedBigInteger('church_id')->default(0);
+            $table->timestamp('lastlogin')->nullable();
             //$table->foreign('church')->references('id')->on('churches');
 
         });
