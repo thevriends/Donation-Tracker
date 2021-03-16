@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DonationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,27 @@ Route::get('/', function () {
     return view('login');
 });
 
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+
+
+
+Route::resource('donation', [DonationController::class]);
+// Route::get('/donation', function () {
+//     return view('donation');
+// });
+
+
+// Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+//     Route::get('/dashboard', function () {
+//         return view('dashboard');
+//     })->name('dashboard');
+//     Route::get('/dashboard/donation', function () {
+//         return view('donation');
+//     })->name('donation');
+// });
