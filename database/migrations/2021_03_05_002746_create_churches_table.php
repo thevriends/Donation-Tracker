@@ -18,7 +18,7 @@ class CreateChurchesTable extends Migration
             $table->string('name');
             $table->string('address');
             $table->string('creator')->unique()->nullable();
-            $table->boolean('active')->default(true);        
+            $table->boolean('active')->default(true);            
             $table->timestamps();
         });
     }

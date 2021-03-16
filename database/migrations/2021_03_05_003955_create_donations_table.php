@@ -18,7 +18,8 @@ class CreateDonationsTable extends Migration
             $table->biginteger('Donator');
             $table->biginteger('target');
             $table->decimal('value', $precision = 8, $scale = 2);
-            $table->timestamp('datedonated');
+            $table->timestamp('datedonated');            
+            $table->timestamps();
         });
     }
 
