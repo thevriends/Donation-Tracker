@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+        <x-slot name="title">
+            <h1 class="text-6xl pb-6">Donation Tracker</h1>
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -36,6 +36,11 @@
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
+                    </a>
+                @endif
+                @if (Route::has('register'))
+                    <a class="underline text-sm mx-6 text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                        {{ __('Register') }}
                     </a>
                 @endif
 

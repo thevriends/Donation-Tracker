@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+        <x-slot name="title">
+            <h1 class="text-6xl pb-6">Two-Factor Authentication</h1>
         </x-slot>
 
         <div x-data="{ recovery: false }">
